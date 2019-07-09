@@ -37,7 +37,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        FirebaseApp.initializeApp(LogInActivity.this);
+        FirebaseApp.initializeApp(LoginActivity.this);
         authentication = FirebaseAuth.getInstance();
         preferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
         password = findViewById(R.id.passwordText);
@@ -50,7 +50,7 @@ public class LoginActivity extends AppCompatActivity {
         link_forgot_password.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LogInActivity.this, ForgotPasswordActivity.class);
+                Intent intent = new Intent(LoginActivity.this, ForgotPasswordActivity.class);
                 startActivity(intent);
 
             }
@@ -58,7 +58,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void btn_login_Click (View view){
-        final ProgressDialog progressDialog= ProgressDialog.show(LogInActivity.this, "Please wait", "Processing...", true);
+        final ProgressDialog progressDialog= ProgressDialog.show(LoginActivity.this, "Please wait", "Processing...", true);
         (authentication.signInWithEmailAndPassword(username.getText().toString(), password.getText().toString()))
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
@@ -67,20 +67,20 @@ public class LoginActivity extends AppCompatActivity {
 
                         if (task.isSuccessful()) {
                             Toast.makeText(getApplicationContext(), "Login Successful", Toast.LENGTH_SHORT).show();
-                            Intent login = new Intent(LogInActivity.this, DashboardActivity.class);
+                            Intent login = new Intent(LoginActivity.this, DashboardActivity.class);
                             login.putExtra("Email", authentication.getCurrentUser().getEmail());
                             login.putExtra("Name", authentication.getCurrentUser().getDisplayName());
                             startActivity(login);
                         } else {
                             Log.e("Wrong email or password", task.getException().toString());
-                            Toast.makeText(LogInActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
     }
 
     public void btn_signUp_Click (View v){
-        Intent signUp = new Intent (LogInActivity.this, SignUpActivity.class);
+        Intent signUp = new Intent (LoginActivity.this, SignUpActivity.class);
         startActivity(signUp);
     }
 
