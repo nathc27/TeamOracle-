@@ -4,16 +4,22 @@
     <item
         android:id="@+id/navigation_annoucements"
         android:icon="@drawable/notification_logo"
-        android:title="@string/title_annoucements" />
+        android:title="@string/title_annoucements"
+        android:textColor="@android:color/white"
+        />
 
     <item
         android:id="@+id/navigation_learn"
         android:icon="@drawable/dashboard_logo1"
-        android:title="@string/title_learn" />
+        android:title="@string/title_learn"
+        android:textColor="@android:color/white"
+        />
 
     <item
         android:id="@+id/navigation_profile"
         android:icon="@drawable/profile_logo"
-        android:title="@string/title_profile" />
+        android:title="@string/title_profile"
+        android:textColor="@android:color/white"
+        />
 
 </menu>
