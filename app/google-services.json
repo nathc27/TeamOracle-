@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "629402722225",
+    "firebase_url": "https://teamoracle-6a9f6.firebaseio.com",
+    "project_id": "teamoracle-6a9f6",
+    "storage_bucket": "teamoracle-6a9f6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:629402722225:android:8c9b9bfc66f08c97",
+        "android_client_info": {
+          "package_name": "com.example.teamoracle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "629402722225-1grh3h6ds43n3i9bb009uh8m1u8vh0db.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsJqtsW2WES8Pv6h3LS3DNsh2viHUjzlY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "629402722225-1grh3h6ds43n3i9bb009uh8m1u8vh0db.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
