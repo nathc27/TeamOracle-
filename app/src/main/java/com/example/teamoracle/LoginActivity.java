@@ -40,11 +40,11 @@ public class LoginActivity extends AppCompatActivity {
         FirebaseApp.initializeApp(LoginActivity.this);
         authentication = FirebaseAuth.getInstance();
         preferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
-        password = findViewById(R.id.passwordText);
-        username = findViewById(R.id.usernameText);
-        login = findViewById(R.id.loginButton);
+        password = findViewById(R.id.input_confirm_password);
+        username = findViewById(R.id.input_name);
+        login = findViewById(R.id.btn_signUp);
         register = findViewById(R.id.createAccountButton);
-        rememberMe = findViewById(R.id.rememberMeCheckbox);
+       // rememberMe = findViewById(R.id.rememberMeCheckbox);
         link_forgot_password = findViewById(R.id.link_forgot_password);
 
         link_forgot_password.setOnClickListener(new View.OnClickListener() {

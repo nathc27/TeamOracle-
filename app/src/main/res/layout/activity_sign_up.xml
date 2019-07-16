@@ -31,21 +31,20 @@
         app:srcCompat="@drawable/TeamOracle" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/input_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="164dp"
         android:layout_marginEnd="97dp"
         android:layout_marginRight="97dp"
         android:ems="10"
-        android:hint="Password"
         android:inputType="textPersonName"
-        android:text="Username"
+        android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/input_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="96dp"
@@ -55,13 +54,13 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="E-mail"
-        app:layout_constraintBottom_toTopOf="@+id/editText"
+        app:layout_constraintBottom_toTopOf="@+id/input_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
         app:layout_constraintVertical_bias="0.875" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/input_confirm_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
@@ -71,10 +70,10 @@
         android:ems="10"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/input_name" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/input_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="9dp"
@@ -85,10 +84,10 @@
 
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/input_name" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_signUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
@@ -97,7 +96,19 @@
         android:background="@drawable/loginbck"
         android:text="Sign Up"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintTop_toBottomOf="@+id/input_confirm_password" />
+
+    <TextView
+        android:id="@+id/link_login"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:text="Already a member? Login"
+        android:textColor="@color/black"
+        android:textSize="16dip"
+        app:layout_constraintTop_toBottomOf="@+id/btn_signUp"
+        tools:layout_editor_absoluteX="0dp" />
 
 
 

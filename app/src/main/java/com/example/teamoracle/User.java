@@ -3,10 +3,10 @@ package com.example.teamoracle;
 public class User {
     public String name, email;
 
-    public User(){
+    public User() {
     }
 
-    public User(String name, String email){
+    public User(String name, String email) {
         this.name = name;
         this.email = email;
     }
@@ -26,3 +26,4 @@ public class User {
     public void setEmail(String email) {
         this.email = email;
     }
+}
