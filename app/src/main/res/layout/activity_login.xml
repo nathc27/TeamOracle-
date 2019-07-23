@@ -27,7 +27,7 @@
         android:layout_marginRight="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/TeamOracle" />
+        app:srcCompat="@drawable/teamoracle" />
 
     <EditText
         android:id="@+id/input_name"

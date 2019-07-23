@@ -28,7 +28,7 @@
         android:layout_marginRight="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/TeamOracle" />
+        app:srcCompat="@drawable/teamoracle" />
 
     <EditText
         android:id="@+id/input_name"
@@ -107,8 +107,8 @@
         android:text="Already a member? Login"
         android:textColor="@color/black"
         android:textSize="16dip"
-        app:layout_constraintTop_toBottomOf="@+id/btn_signUp"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_signUp" />
 
 
 
