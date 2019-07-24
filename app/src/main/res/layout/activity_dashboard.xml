@@ -43,6 +43,7 @@
                         android:layout_width="64dp"
                         android:layout_height="64dp"
                         android:src="@drawable/content_logo"
+                        android:id="@+id/content_access"
                         android:padding="10dp"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -80,6 +81,7 @@
                         android:layout_width="64dp"
                         android:layout_height="64dp"
                         android:src="@drawable/quiz_logo"
+                        android:id="@+id/quiz_access"
                         android:padding="10dp"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -125,7 +127,9 @@
                         android:layout_width="64dp"
                         android:layout_height="64dp"
                         android:src="@drawable/notes_logo"
+                        android:id="@+id/exercise_access"
                         android:padding="10dp"/>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -164,6 +168,7 @@
                         android:layout_width="64dp"
                         android:layout_height="64dp"
                         android:padding="10dp"
+                        android:id="@+id/forum_access"
                         android:src="@drawable/forum_logo" />
 
                     <TextView
@@ -214,6 +219,7 @@
                         android:layout_width="64dp"
                         android:layout_height="64dp"
                         android:src="@drawable/leaderboard_logo"
+                        android:id="@+id/leaderboard_access"
                         android:padding="10dp"/>
                     <TextView
                         android:layout_width="wrap_content"
