@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/navigation_annoucements"
+        android:id="@+id/navigation_annoucement"
         android:icon="@drawable/notification_logo"
         android:title="@string/title_annoucements"
         android:textColor="@android:color/white"

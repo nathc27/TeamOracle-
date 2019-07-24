@@ -59,7 +59,7 @@ public class SignUpActivity extends AppCompatActivity {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 if (firebaseAuth.getCurrentUser() != null) {
-                    Intent intent = new Intent(SignUpActivity.this, LogInActivity.class);
+                    Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
                     startActivity(intent);
                     finish();
                 }
@@ -113,7 +113,7 @@ public class SignUpActivity extends AppCompatActivity {
                             DatabaseReference currentUserDB = mDatabase.child(authentication.getCurrentUser().getUid());
                             currentUserDB.child("name").setValue(name);
                             currentUserDB.child("email").setValue(email);
-                            Intent intent = new Intent(SignUpActivity.this, LogInActivity.class);
+                            Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
                             SignUpActivity.this.finish();
                             startActivity(intent);
                         } else {

@@ -28,9 +28,9 @@ public class ForgotPasswordActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forgot_password);
 
-        link_back_to_login = findViewById(R.id.link_back_to_login);
-        reset_email_input = findViewById(R.id.emailText);
-        send_email_button = findViewById(R.id.SendEmailButton);
+        link_back_to_login = findViewById(R.id.link_login);
+        reset_email_input = findViewById(R.id.input_email);
+        send_email_button = findViewById(R.id.btn_confirm);
 
         authentication = FirebaseAuth.getInstance();
         link_back_to_login.setOnClickListener(new View.OnClickListener() {
@@ -56,20 +56,18 @@ public class ForgotPasswordActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String email = reset_email_input.getText().toString();
 
-                if(TextUtils.isEmpty(email)){
+                if (TextUtils.isEmpty(email)) {
                     Toast.makeText(ForgotPasswordActivity.this, "Please enter valid email address", Toast.LENGTH_SHORT).show();
-                }
-                else{
+                } else {
                     authentication.sendPasswordResetEmail(email).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
-                            if(task.isSuccessful()){
+                            if (task.isSuccessful()) {
                                 Toast.makeText(ForgotPasswordActivity.this, "Please Check Your Email", Toast.LENGTH_SHORT).show();
                                 startActivity(new Intent(ForgotPasswordActivity.this, LoginActivity.class));
-                            }
-                            else{
-                                String message =task.getException().getMessage();
-                                Toast.makeText(ForgotPasswordActivity.this,"Email address not valid" + message, Toast.LENGTH_SHORT).show();
+                            } else {
+                                String message = task.getException().getMessage();
+                                Toast.makeText(ForgotPasswordActivity.this, "Email address not valid" + message, Toast.LENGTH_SHORT).show();
                             }
                         }
                     });
@@ -77,3 +75,4 @@ public class ForgotPasswordActivity extends AppCompatActivity {
             }
         });
     }
+}

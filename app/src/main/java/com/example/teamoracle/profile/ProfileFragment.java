@@ -58,10 +58,10 @@ public class ProfileFragment extends Fragment {
             }
         });
 
-        profileName = rootView.findViewById(R.id.profileName);
-        profileEmail = rootView.findViewById(R.id.profileEmail);
-        information = rootView.findViewById(R.id.information);
-        level = rootView.findViewById(R.id.level);
+       // profileName = rootView.findViewById(R.id.profileName);
+        //profileEmail = rootView.findViewById(R.id.profileEmail);
+        //information = rootView.findViewById(R.id.information);
+        //level = rootView.findViewById(R.id.level);
         logOutButton = rootView.findViewById(R.id.logOutButton);
         logOutButton.setOnClickListener(new View.OnClickListener() {
             @Override

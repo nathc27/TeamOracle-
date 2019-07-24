@@ -7,7 +7,15 @@
     android:background=""
     android:layout_height="match_parent">
 
-
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="56dp"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -20,6 +28,7 @@
         android:background="#fcfcfc"
         android:gravity="center"
         android:id="@+id/ll">
+
         <LinearLayout
             android:clipToPadding="false"
             android:gravity="center"
