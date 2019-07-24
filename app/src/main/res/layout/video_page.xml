@@ -13,7 +13,7 @@
         android:background="#FFE600"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/top_bar" />
+        app:srcCompat="@drawable/topbar" />
     <ImageView
         android:id="@+id/imageView8"
         android:layout_width="59dp"
@@ -21,7 +21,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
-        android:src="@drawable/ic_arrow_back"
+        android:src="@drawable/icarrowback"
         app:layout_constraintStart_toStartOf="@+id/imageView7"
         app:layout_constraintTop_toTopOf="parent" />
 

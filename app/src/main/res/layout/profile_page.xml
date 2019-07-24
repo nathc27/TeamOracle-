@@ -18,7 +18,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/ic_account"/>
+                android:src="@drawable/icaccount"/>
             <TextView
                 android:layout_marginTop="10dp"
                 android:layout_gravity="center_horizontal"
@@ -107,7 +107,7 @@
             <ImageView
                 android:layout_width="36dp"
                 android:layout_height="36dp"
-                android:src="@drawable/ic_mail" />
+                android:src="@drawable/icmail" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -129,7 +129,7 @@
             <ImageView
                 android:layout_width="36dp"
                 android:layout_height="36dp"
-                android:src="@drawable/ic_phone" />
+                android:src="@drawable/icphone" />
 
             <TextView
                 android:layout_width="wrap_content"

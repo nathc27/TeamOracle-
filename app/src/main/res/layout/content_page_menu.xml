@@ -52,7 +52,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/video_view"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/ic_video" />
+                    android:src="@drawable/icvideo" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -96,7 +96,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:id="@+id/books_view"
-                    android:src="@drawable/ic_books" />
+                    android:src="@drawable/icbooks" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -136,7 +136,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:id="@+id/notes_view"
-                    android:src="@drawable/exercise_logo" />
+                    android:src="@drawable/exerciselogo" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -164,7 +164,7 @@
         android:background="#FFE600"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/top_bar" />
+        app:srcCompat="@drawable/topbar" />
 
 
     <TextView
@@ -201,7 +201,7 @@
         android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="@+id/imageView9"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/ic_arrow_back" />
+        android:src="@drawable/icarrowback" />
 
 </android.support.constraint.ConstraintLayout>
 
