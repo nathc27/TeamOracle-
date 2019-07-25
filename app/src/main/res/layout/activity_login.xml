@@ -37,8 +37,8 @@
         android:layout_marginEnd="97dp"
         android:layout_marginRight="97dp"
         android:ems="10"
+        android:hint="Username"
         android:inputType="textPersonName"
-        android:text="Username"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
@@ -63,6 +63,7 @@
         android:layout_marginEnd="124dp"
         android:layout_marginRight="124dp"
         android:background="@drawable/loginbck"
+        android:onClick="btn_login_Click"
         android:text="Login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/input_confirm_password" />
@@ -77,6 +78,7 @@
         android:background="@drawable/loginbck"
         android:text="Create an Account"
         app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="btn_signUp_Click"
         app:layout_constraintTop_toBottomOf="@+id/btn_login" />
 
     <TextView

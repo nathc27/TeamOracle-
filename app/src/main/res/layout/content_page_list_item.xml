@@ -33,7 +33,6 @@
         android:layout_height="match_parent"
         android:layout_weight="20"
         android:padding="10dp"
-        android:srcCompat="@drawable/icchevronright"
         android:background="@drawable/icchevronright"/>
 
 </LinearLayout>
