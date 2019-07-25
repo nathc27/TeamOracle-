@@ -14,7 +14,6 @@ import android.widget.TextView;
 
 import com.example.teamoracle.DashboardActivity;
 import com.example.teamoracle.R;
-import com.example.teamoracle.User;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;

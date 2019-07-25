@@ -1,4 +1,4 @@
-package com.example.teamoracle;
+package com.example.teamoracle.profile;
 
 public class User {
     public String name, email;

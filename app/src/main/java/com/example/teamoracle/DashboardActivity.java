@@ -13,7 +13,7 @@ import com.example.teamoracle.Annoucement.AnnoucementFragment;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.FirebaseOptions;
 
-import static com.example.teamoracle.R.id.navigation_learn;
+import static com.example.teamoracle.R.id.navigation_annoucement;
 
 public class DashboardActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
