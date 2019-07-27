@@ -1,109 +1,91 @@
 package com.example.teamoracle.Learn;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.constraint.solver.widgets.WidgetContainer;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.teamoracle.Content.ContentActivity;
+import com.example.teamoracle.Exercise.ExerciseActivity;
+import com.example.teamoracle.Forum.ForumActivity;
+import com.example.teamoracle.Leaderboard.LeaderboardActivity;
+import com.example.teamoracle.Quiz.QuizActivity;
 import com.example.teamoracle.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link LearnFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link LearnFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class LearnFragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    private CardView contentWidget, quizWidget, exerciseWidget, forumWidget, leaderboardWidget;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
 
-    private OnFragmentInteractionListener mListener;
-
-    public LearnFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment LearnFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static LearnFragment newInstance(String param1, String param2) {
-        LearnFragment fragment = new LearnFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
+    @Nullable
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.fragment_learn, container, false);
+        contentWidget = rootView.findViewById(R.id.content_widget);
+        quizWidget = rootView.findViewById(R.id.quiz_widget);
+        exerciseWidget = rootView.findViewById(R.id.exercise_widget);
+        forumWidget = rootView.findViewById(R.id.forum_widget);
+        leaderboardWidget = rootView.findViewById(R.id.leaderboard_widget);
+        contentWidget.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openContent();
+            }
+        });
+        quizWidget.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openQuiz();
+            }
+        });
+        exerciseWidget.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openExercise();
+            }
+        });
+        forumWidget.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openForum();
+            }
+        });
+        leaderboardWidget.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openLeaderboard();
+            }
+        });
+        return rootView;
+
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_learn, container, false);
+    void openContent() {
+        Intent signUp = new Intent (this.getContext(), ContentActivity.class);
+        startActivity(signUp);
     }
-
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
-        }
+    void openQuiz() {
+        Intent signUp = new Intent (this.getContext(), QuizActivity.class);
+        startActivity(signUp);
     }
-
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        if (context instanceof OnFragmentInteractionListener) {
-            mListener = (OnFragmentInteractionListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
-        }
+    void openExercise() {
+        Intent signUp = new Intent (this.getContext(), ExerciseActivity.class);
+        startActivity(signUp);
     }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mListener = null;
+    void openForum() {
+        Intent signUp = new Intent (this.getContext(), ForumActivity.class);
+        startActivity(signUp);
     }
-
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
-    public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
-        void onFragmentInteraction(Uri uri);
+    void openLeaderboard() {
+        Intent signUp = new Intent (this.getContext(), LeaderboardActivity.class);
+        startActivity(signUp);
     }
 }
