@@ -64,18 +64,18 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
     //TODO: create post query
-    public void createPost() {
+    public static void createPost(Post post) {
 
     }
 
     //TODO: get root post
-    public List<Post> getRootPosts() {
+    public static List<Post> getRootPosts() {
         List<Post> rootPosts = new ArrayList<Post>();
         return rootPosts;
     }
 
     //TODO: get responses for one post
-    public List<Post> getResponses(int root) {
+    public static List<Post> getResponses(int root) {
         List<Post> rootPosts = new ArrayList<Post>();
         return rootPosts;
     }

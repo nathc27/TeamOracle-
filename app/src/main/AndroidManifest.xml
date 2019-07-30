@@ -11,6 +11,11 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Forum.PostDetailActivity"></activity>
         <activity android:name=".Forum.ForumDashboardActivity" />
+        <activity android:name=".Quiz.QuizActivity"></activity>
+        <activity android:name=".Leaderboard.LeaderboardActivity" />
+        <activity android:name=".Forum.ForumActivity" />
+        <activity android:name=".Exercise.ExerciseActivity" />
+        <activity android:name=".Content.ContentActivity" />
         <activity android:name=".DashboardActivity" />
         <activity android:name=".ForgotPasswordActivity" />
         <activity android:name=".SignUpActivity" />
