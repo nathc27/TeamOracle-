@@ -31,15 +31,13 @@ public class ForumDashboardActivity extends AppCompatActivity {
         bt_post = findViewById(R.id.bt_post);
 
         //TODO: you can remove try-catch block after passing the user name in from dashboard activity
-        try {
-            author = this.getIntent().getStringExtra("Name");
-        } catch (Exception e) {
-            author = "Michael";
-        }
+        author = this.getIntent().getStringExtra("Name");
+        if (author.isEmpty()) author = "Michael";
 
         //retrieve root posts from database
         db = new DBHelper(this);
-        rootPosts = DBHelper.getRootPosts();
+        db.cleanDatabase();
+        rootPosts = db.getRootPosts();
         //bind recycler layout
         postRecycler = findViewById(R.id.recyc_post);
         postRecycler.setLayoutManager(new LinearLayoutManager(this));
@@ -54,10 +52,10 @@ public class ForumDashboardActivity extends AppCompatActivity {
                 newPost.setTitle(text_title.getText().toString());
                 newPost.setPostContent(text_post.getText().toString());
                 newPost.setRoot(Post.ROOT_POST);
-                DBHelper.createPost(newPost);
+                db.createPost(newPost);
 
                 //refresh the list below
-                rootPosts = DBHelper.getRootPosts();
+                rootPosts = db.getRootPosts();
                 postRecycler.setAdapter(new PostAdapter(ForumDashboardActivity.this, rootPosts));
             }
         });

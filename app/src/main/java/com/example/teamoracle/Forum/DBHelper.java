@@ -72,7 +72,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public List<Post> getRootPosts() {
         List<Post> rootPosts = new ArrayList<Post>();
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor c = db.rawQuery("SELECT * FROM post WHERE root =" + Post.ROOT_POST + " ORDER BY  seq DESC", null);
+        Cursor c = db.rawQuery("SELECT * FROM post WHERE root =" + Post.ROOT_POST + " ORDER BY seq DESC", null);
         while (c.moveToNext()) {
             Post p = new Post();
             p.setSeq(c.getInt(c.getColumnIndex("seq")));

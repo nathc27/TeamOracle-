@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -29,7 +30,7 @@ public class PostDetailActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_up);
+        setContentView(R.layout.forum_page_reply);
         final Post root = this.getIntent().getParcelableExtra(Post.POST_TAG);
         //bind view
         tv_rootPost = findViewById(R.id.tv_root_post);
@@ -38,12 +39,14 @@ public class PostDetailActivity extends AppCompatActivity {
         bt_Reply = findViewById(R.id.bt_reply);
 
         //TODO: show post detail -> need to test output
+        //Log.d("POST", root.getTitle());
         String rootPostText = "\"" + root.getTitle() + "\"\n\n" + root.getPostContent();
         tv_rootPost.setText(rootPostText);
+        tv_Author.setText(root.getAuthor());
 
-        //TODO: get responses from database
+        //get responses from database
         db = new DBHelper(this);
-        responses = DBHelper.getResponses(root.getSeq());
+        responses = db.getResponses(root.getSeq());
 
         responseRecycler = findViewById(R.id.recyc_responses);
         responseRecycler.setLayoutManager(new LinearLayoutManager(this));
@@ -60,10 +63,10 @@ public class PostDetailActivity extends AppCompatActivity {
                 newResponse.setPostContent(text_response.getText().toString());
                 newResponse.setAuthor(ForumDashboardActivity.author);
 
-                DBHelper.createPost(newResponse);
+                db.createPost(newResponse);
 
                 //refresh the response list
-                responses = DBHelper.getResponses(root.getSeq());
+                responses = db.getResponses(root.getSeq());
                 responseRecycler.setAdapter(new ResponseAdapter(PostDetailActivity.this, responses));
             }
         });

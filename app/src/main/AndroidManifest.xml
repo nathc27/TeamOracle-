@@ -10,7 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Forum.PostDetailActivity"></activity>
-        <activity android:name=".Forum.ForumDashboardActivity" />
+        <activity android:name=".Forum.ForumDashboardActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".Quiz.QuizActivity"></activity>
         <activity android:name=".Leaderboard.LeaderboardActivity" />
         <activity android:name=".Forum.ForumActivity" />
@@ -21,7 +26,6 @@
         <activity android:name=".SignUpActivity" />
         <activity android:name=".LoginActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>

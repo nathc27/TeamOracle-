@@ -3,6 +3,7 @@ package com.example.teamoracle.Forum;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +12,6 @@ import android.widget.TextView;
 import com.example.teamoracle.R;
 
 import java.util.List;
-import java.util.function.ToDoubleBiFunction;
 
 public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
 
@@ -43,6 +43,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(mContext, PostDetailActivity.class);
+                //Log.d("POST ADAPTOR", post.getTitle());
                 intent.putExtra(Post.POST_TAG, post);
                 mContext.startActivity(intent);
             }
@@ -64,7 +65,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
             super(itemView);
             //BIND VIEW
             tv_title = itemView.findViewById(R.id.tv_forum_topic);
-            tv_author = itemView.findViewById(R.id.tv_forum_author);
+            tv_author = itemView.findViewById(R.id.post_author);
         }
     }
 }

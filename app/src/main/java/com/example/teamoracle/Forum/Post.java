@@ -27,20 +27,6 @@ public class Post implements Parcelable {
         }
     };
 
-    public Post(int root, int seq, String author, String postContent, String title) {
-        this.root = root;
-        this.seq = seq;
-        this.author = author;
-        this.postContent = postContent;
-        this.title = title;
-    }
-
-    public Post(int root, String author, String postContent, String title) {
-        this.root = root;
-        this.author = author;
-        this.postContent = postContent;
-        this.title = title;
-    }
 
     public Post() {
     }
@@ -48,8 +34,8 @@ public class Post implements Parcelable {
     protected Post(Parcel in) {
         this.seq = in.readInt();
         this.root = in.readInt();
-        this.author = in.readString();
         this.title = in.readString();
+        this.author = in.readString();
         this.postContent = in.readString();
     }
 
@@ -89,6 +75,10 @@ public class Post implements Parcelable {
         return seq;
     }
 
+    public void setSeq(int seq) {
+        this.seq = seq;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -97,9 +87,9 @@ public class Post implements Parcelable {
     @Override
     public void writeToParcel(Parcel parcel, int i) {
         parcel.writeInt(seq);
-        parcel.writeString(author);
         parcel.writeInt(root);
         parcel.writeString(title);
+        parcel.writeString(author);
         parcel.writeString(postContent);
     }
 }
