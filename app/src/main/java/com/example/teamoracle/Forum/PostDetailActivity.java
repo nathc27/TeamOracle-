@@ -38,7 +38,7 @@ public class PostDetailActivity extends AppCompatActivity {
         text_response = findViewById(R.id.text_response);
         bt_Reply = findViewById(R.id.bt_reply);
 
-        //TODO: show post detail -> need to test output
+        //show post detail -> need to test output
         //Log.d("POST", root.getTitle());
         String rootPostText = "\"" + root.getTitle() + "\"\n\n" + root.getPostContent();
         tv_rootPost.setText(rootPostText);
@@ -64,7 +64,7 @@ public class PostDetailActivity extends AppCompatActivity {
                 newResponse.setAuthor(ForumDashboardActivity.author);
 
                 db.createPost(newResponse);
-
+                text_response.setText("");
                 //refresh the response list
                 responses = db.getResponses(root.getSeq());
                 responseRecycler.setAdapter(new ResponseAdapter(PostDetailActivity.this, responses));

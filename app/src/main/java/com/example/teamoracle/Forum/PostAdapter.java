@@ -63,7 +63,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
 
         public ViewHolder(View itemView) {
             super(itemView);
-            //BIND VIEW
+            //TODO: you can change the layout by changing the layout id
             tv_title = itemView.findViewById(R.id.tv_forum_topic);
             tv_author = itemView.findViewById(R.id.post_author);
         }

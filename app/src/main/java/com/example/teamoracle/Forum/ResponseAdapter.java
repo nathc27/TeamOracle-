@@ -51,7 +51,7 @@ public class ResponseAdapter extends RecyclerView.Adapter<ResponseAdapter.ViewHo
 
         public ViewHolder(View itemView) {
             super(itemView);
-            //BIND VIEW
+            //TODO: you can change the layout by changing the layout id
             tv_content = itemView.findViewById(R.id.tv_discussion_reply);
             tv_author = itemView.findViewById(R.id.reply_author);
         }
