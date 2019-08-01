@@ -1,5 +1,6 @@
 package com.example.teamoracle.Learn;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -14,8 +15,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.teamoracle.Content.ContentActivity;
+import com.example.teamoracle.DashboardActivity;
 import com.example.teamoracle.Exercise.ExerciseActivity;
 import com.example.teamoracle.Forum.ForumActivity;
+import com.example.teamoracle.Forum.ForumDashboardActivity;
 import com.example.teamoracle.Leaderboard.LeaderboardActivity;
 import com.example.teamoracle.Quiz.QuizActivity;
 import com.example.teamoracle.R;
@@ -23,7 +26,6 @@ import com.example.teamoracle.R;
 
 public class LearnFragment extends Fragment {
     private CardView contentWidget, quizWidget, exerciseWidget, forumWidget, leaderboardWidget;
-
 
     @Nullable
     @Override
@@ -84,8 +86,9 @@ public class LearnFragment extends Fragment {
     }
 
     void openForum() {
-        Intent signUp = new Intent(this.getContext(), ForumActivity.class);
-        startActivity(signUp);
+        Intent forum = new Intent(this.getContext(), ForumDashboardActivity.class);
+        forum.putExtra("Name", this.getActivity().getIntent().getStringExtra("Name"));
+        startActivity(forum);
     }
 
     void openLeaderboard() {
