@@ -1,13 +1,9 @@
 package com.example.teamoracle.Learn;
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.constraint.solver.widgets.WidgetContainer;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
@@ -15,9 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.teamoracle.Content.ContentActivity;
-import com.example.teamoracle.DashboardActivity;
 import com.example.teamoracle.Exercise.ExerciseActivity;
-import com.example.teamoracle.Forum.ForumActivity;
 import com.example.teamoracle.Forum.ForumDashboardActivity;
 import com.example.teamoracle.Leaderboard.LeaderboardActivity;
 import com.example.teamoracle.Quiz.QuizActivity;

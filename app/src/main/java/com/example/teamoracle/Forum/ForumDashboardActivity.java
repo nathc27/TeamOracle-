@@ -38,7 +38,7 @@ public class ForumDashboardActivity extends AppCompatActivity {
 
         //retrieve root posts from database
         db = new DBHelper(this);
-        db.cleanDatabase();
+        //db.cleanDatabase(); //TODO: uncomment this line and run it once to to clean the database on vm
         rootPosts = db.getRootPosts();
         //bind recycler layout
         postRecycler = findViewById(R.id.recyc_post);//TODO: you can change the layout by changing the layout id
