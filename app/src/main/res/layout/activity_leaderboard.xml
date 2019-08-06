@@ -7,6 +7,7 @@
     android:layout_height="match_parent">
 
     <android.support.v7.widget.RecyclerView
+        android:id="@+id/leaderboard_list"
         android:layout_width="400dp"
         android:layout_height="664dp"
         android:layout_marginTop="8dp"
@@ -25,7 +26,7 @@
         android:background="#FFE600"/>
 
     <ImageView
-        android:id="@+id/imageView23"
+        android:id="@+id/iv_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
