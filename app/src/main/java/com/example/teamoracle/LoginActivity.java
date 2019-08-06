@@ -25,7 +25,6 @@ public class LoginActivity extends AppCompatActivity {
     private TextView username;
     private Button login;
     private Button register;
-    private CheckBox rememberMe;
     private SharedPreferences preferences;
     private static final String PREFS_NAME = "PrefsFile";
     private TextView link_forgot_password ;
@@ -44,7 +43,6 @@ public class LoginActivity extends AppCompatActivity {
         username = findViewById(R.id.input_name);
         login = findViewById(R.id.btn_signUp);
         register = findViewById(R.id.createAccountButton);
-       // rememberMe = findViewById(R.id.rememberMeCheckbox);
         link_forgot_password = findViewById(R.id.link_forgot_password);
 
         link_forgot_password.setOnClickListener(new View.OnClickListener() {

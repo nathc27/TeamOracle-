@@ -9,10 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Forum.PostDetailActivity"></activity>
-        <activity android:name=".Forum.ForumDashboardActivity">
-        </activity>
-        <activity android:name=".Quiz.QuizActivity"></activity>
+        <activity android:name=".Quiz.StartQuizActivity"></activity>
+        <activity android:name=".Quiz.FinishQuizActivity" />
+        <activity android:name=".Quiz.TestActivity" />
+        <activity android:name=".Forum.PostDetailActivity" />
+        <activity android:name=".Forum.ForumDashboardActivity" />
+        <activity android:name=".Quiz.QuizActivity" />
         <activity android:name=".Leaderboard.LeaderboardActivity" />
         <activity android:name=".Exercise.ExerciseActivity" />
         <activity android:name=".Content.ContentActivity" />
@@ -22,6 +24,7 @@
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
