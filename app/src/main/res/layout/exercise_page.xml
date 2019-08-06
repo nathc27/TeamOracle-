@@ -31,9 +31,8 @@
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView"
-        android:layout_width="406dp"
-        android:layout_height="641dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="414dp"
+        android:layout_height="655dp"
         android:orientation="vertical"
         android:padding="5dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
