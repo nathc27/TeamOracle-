@@ -2,14 +2,37 @@ package com.example.teamoracle.Exercise;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 
 import com.example.teamoracle.R;
 
-public class ExerciseActivity extends AppCompatActivity {
+import java.util.List;
 
+public class ExerciseActivity extends AppCompatActivity {
+    private RecyclerView recyclerView;
+    private ImageView btn_back;
+    private List<String> topics;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_exercise);
+        setContentView(R.layout.exercise_page);
+
+        recyclerView = findViewById(R.id.recyc_exercise);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(new ExerciseAdapter(this, topics));
+
+        //set btn_back onClickListener
+        btn_back = findViewById(R.id.btn_back_dashboard);
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ExerciseActivity.this.onPause(); //need to test
+            }
+        });
+
     }
 }

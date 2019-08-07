@@ -32,15 +32,14 @@
         android:layout_width="346dp"
         android:layout_height="157dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
         android:text="Question"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/imageView21"
+        app:layout_constraintStart_toStartOf="@+id/imageView21"
         app:layout_constraintTop_toTopOf="@+id/imageView21" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/ec_answer"
         android:layout_width="328dp"
         android:layout_height="39dp"
         android:layout_marginTop="32dp"
@@ -62,7 +61,7 @@
         android:background="@drawable/bck3"
         android:text="Submit"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/ec_answer" />
 
     <TextView
         android:id="@+id/tv_ec_answer"
@@ -77,7 +76,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_ec_submit" />
 
     <ImageView
-        android:id="@+id/imageView19"
+        android:id="@+id/btn_next_e"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="128dp"
