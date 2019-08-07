@@ -10,7 +10,7 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="480dp"
-        android:layout_height="70dp"
+        android:layout_height="60dp"
         android:background="#FFE600"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -40,9 +40,8 @@
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView"
-        android:layout_width="410dp"
-        android:layout_height="585dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="419dp"
+        android:layout_height="607dp"
         android:orientation="vertical"
         android:padding="5dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
