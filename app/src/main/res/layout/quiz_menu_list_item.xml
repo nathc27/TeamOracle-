@@ -22,7 +22,6 @@
         android:layout_weight="75"
         android:lines="1"
         android:padding="10dp"
-        android:text="Topic"
         android:textColor="#FFF"
         android:textSize="23sp" />
 
