@@ -40,7 +40,7 @@ public class LeaderboardActivity extends AppCompatActivity {
 
         dialog = new SpotsDialog.Builder().setContext(getContext()).build();
         dialog.show();
-        recyclerView =findViewById(R.id.leaderboard_list);
+        recyclerView = findViewById(R.id.leaderboard_list);
         recyclerView.setHasFixedSize(true);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this.getContext(), LinearLayoutManager.VERTICAL, false);
         linearLayoutManager.setReverseLayout(true);
@@ -80,6 +80,7 @@ public class LeaderboardActivity extends AppCompatActivity {
                 dialog.dismiss();
             }
         }
+
         @Override
         public void onCancelled(DatabaseError databaseError) {
 
@@ -106,3 +107,4 @@ public class LeaderboardActivity extends AppCompatActivity {
             }
         });
     }
+}
