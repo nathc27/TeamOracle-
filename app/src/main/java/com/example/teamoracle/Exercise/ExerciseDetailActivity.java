@@ -34,6 +34,7 @@ public class ExerciseDetailActivity extends AppCompatActivity {
         bt_next = findViewById(R.id.btn_next_e);
         //get exercises from db
         String topic = this.getIntent().getStringExtra(Exercise.EXERCISE_TAG);
+        db = new ExerciseDBHelper(this);
         final Queue<Exercise> exercises = db.getExerciseByTopic(topic);
         //set first question
         Exercise e = exercises.poll();

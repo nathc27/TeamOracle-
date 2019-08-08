@@ -16,18 +16,19 @@
         <activity android:name=".Forum.PostDetailActivity" />
         <activity android:name=".Forum.ForumDashboardActivity" />
         <activity android:name=".Quiz.QuizActivity" />
-        <activity android:name=".Leaderboard.LeaderboardActivity" />
-        <activity android:name=".Exercise.ExerciseActivity" />
+        <activity android:name=".Leaderboard.LeaderboardActivity" />!
+        <activity android:name=".Exercise.ExerciseActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".Content.ContentActivity" />
         <activity android:name=".DashboardActivity" />
         <activity android:name=".ForgotPasswordActivity" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".LoginActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

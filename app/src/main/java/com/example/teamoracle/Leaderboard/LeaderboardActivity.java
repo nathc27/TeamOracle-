@@ -38,16 +38,16 @@ public class LeaderboardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_leaderboard);
 
-        dialog = new SpotsDialog.Builder().setContext(getContext()).build();
+        /*dialog = new SpotsDialog.Builder().setContext(this).build();
         dialog.show();
-        recyclerView =findViewById(R.id.leaderboard_list);
+        recyclerView = findViewById(R.id.leaderboard_list);
         recyclerView.setHasFixedSize(true);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this.getContext(), LinearLayoutManager.VERTICAL, false);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         linearLayoutManager.setReverseLayout(true);
         linearLayoutManager.setStackFromEnd(true);
         recyclerView.setLayoutManager(linearLayoutManager);
         userList = new ArrayList<>();
-        adapter = new LeaderboardAdapter(userList, this.getContext());
+        adapter = new LeaderboardAdapter(userList, this);
         auth = FirebaseAuth.getInstance();
         final FirebaseUser user = auth.getCurrentUser();
         uid = user.getUid();
@@ -64,7 +64,7 @@ public class LeaderboardActivity extends AppCompatActivity {
 
         recyclerView.setAdapter(adapter);
 
-        return rootView;
+        return rootView;*/
     }
 
     // Populates the leaderboard RecyclerView
@@ -80,6 +80,7 @@ public class LeaderboardActivity extends AppCompatActivity {
                 dialog.dismiss();
             }
         }
+
         @Override
         public void onCancelled(DatabaseError databaseError) {
 
@@ -106,3 +107,4 @@ public class LeaderboardActivity extends AppCompatActivity {
             }
         });
     }
+}

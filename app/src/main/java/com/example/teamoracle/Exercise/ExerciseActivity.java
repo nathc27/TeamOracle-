@@ -16,11 +16,14 @@ public class ExerciseActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private ImageView btn_back;
     private List<String> topics;
+    private ExerciseDBHelper db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.exercise_page);
-
+        db = new ExerciseDBHelper(this);
+        db.cleanDatabase();
+        topics = db.getTopics();
         recyclerView = findViewById(R.id.recyc_exercise);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(new ExerciseAdapter(this, topics));

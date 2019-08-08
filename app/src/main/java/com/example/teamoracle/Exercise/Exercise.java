@@ -11,6 +11,12 @@ public class Exercise {
     public Exercise() {
     }
 
+    public Exercise(String topic, String question, String answer) {
+        this.topic = topic;
+        this.question = question;
+        this.answer = answer;
+    }
+
     public int getSeq() {
         return seq;
     }
