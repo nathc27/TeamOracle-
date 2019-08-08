@@ -59,6 +59,7 @@ public class ExerciseDBHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         db.execSQL("DROP TABLE IF EXISTS exercise");
         onCreate(db);
+        //TODO: add more exercises here if you want
         createExercise(new Exercise("Week 1: Introduction to Java", "Write a program that displays Welcome to Java",
                 "public class Q {\n" +
                         "\tpublic static void main(String[ ] args) {\n" +
