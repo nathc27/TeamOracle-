@@ -1,6 +1,7 @@
 package com.example.teamoracle.Quiz;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -8,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.teamoracle.Forum.PostAdapter;
 import com.example.teamoracle.Quiz.Topics;
 import com.example.teamoracle.R;
 
@@ -18,7 +20,7 @@ public class QuizAdapter extends RecyclerView.Adapter<QuizAdapter.ViewHolder> {
     private List<Topics> topicsList;
     private Context context;
 
-    public QuizAdapter(List<Topics> topicsList, Context context) {
+    public QuizAdapter(Context context,List<Topics> topicsList) {
         this.topicsList = topicsList;
         this.context = context;
     }
@@ -27,13 +29,17 @@ public class QuizAdapter extends RecyclerView.Adapter<QuizAdapter.ViewHolder> {
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int i) {
-        View itemView = LayoutInflater.from(context).inflate(R.layout.quiz_menu_list_item, parent, false);
+        LayoutInflater inflater = LayoutInflater.from(context);
+        View itemView = inflater.inflate(R.layout.quiz_menu_list_item, parent, false);
         return new ViewHolder(itemView);
     }
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int i) {
-        Topics topics = topicsList.get(i);
+        final Topics topics = topicsList.get(i);
+
+        //SET VIEW(SET TEXT)
         holder.topic.setText(topics.getTopic());
+
     }
 
     @Override
@@ -42,8 +48,7 @@ public class QuizAdapter extends RecyclerView.Adapter<QuizAdapter.ViewHolder> {
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-
-        public TextView topic;
+        TextView topic;
 
         public ViewHolder(@NonNull View item) {
             super(item);
