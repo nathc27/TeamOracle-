@@ -25,8 +25,10 @@
             tools:text="11"/>
     </RelativeLayout>
 
-    <de.hdodenhof.circleimageview.CircleImageView
+    <android.support.v7.widget.AppCompatImageView
+
         android:id="@+id/iv_photo"
+        android:src="@drawable/profilelogo"
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:layout_margin="5dp"
@@ -65,9 +67,9 @@
             android:id="@+id/total"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="#FFE600"
             android:textSize="30sp"
             android:textStyle="bold"
-            android:textColor="FFE600"
             tools:text="54" />
 
 
