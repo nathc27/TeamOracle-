@@ -38,21 +38,21 @@ public class LeaderboardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_leaderboard);
 
-        /*dialog = new SpotsDialog.Builder().setContext(this).build();
+        dialog = new SpotsDialog.Builder().setContext(LeaderboardActivity.this).build();
         dialog.show();
         recyclerView = findViewById(R.id.leaderboard_list);
         recyclerView.setHasFixedSize(true);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(LeaderboardActivity.this, LinearLayoutManager.VERTICAL, false);
         linearLayoutManager.setReverseLayout(true);
         linearLayoutManager.setStackFromEnd(true);
         recyclerView.setLayoutManager(linearLayoutManager);
         userList = new ArrayList<>();
-        adapter = new LeaderboardAdapter(userList, this);
+        adapter = new LeaderboardAdapter(userList, LeaderboardActivity.this);
         auth = FirebaseAuth.getInstance();
         final FirebaseUser user = auth.getCurrentUser();
         uid = user.getUid();
 
-        TextView name = findViewById(R.id.title);
+        TextView name = findViewById(R.id.name);
         TextView total = findViewById(R.id.score);
         playerScore = findViewById(R.id.playerScore);
 
@@ -64,7 +64,6 @@ public class LeaderboardActivity extends AppCompatActivity {
 
         recyclerView.setAdapter(adapter);
 
-        return rootView;*/
     }
 
     // Populates the leaderboard RecyclerView

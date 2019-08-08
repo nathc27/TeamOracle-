@@ -1,7 +1,9 @@
 package com.example.teamoracle.Exercise;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -36,6 +38,7 @@ public class ExerciseDetailActivity extends AppCompatActivity {
         String topic = this.getIntent().getStringExtra(Exercise.EXERCISE_TAG);
         db = new ExerciseDBHelper(this);
         final Queue<Exercise> exercises = db.getExerciseByTopic(topic);
+        Log.d("QUEUE", String.valueOf(exercises.size()));
         //set first question
         Exercise e = exercises.poll();
         resetPage(e);
@@ -47,8 +50,8 @@ public class ExerciseDetailActivity extends AppCompatActivity {
                 if (e != null) {
                     resetPage(e);
                 } else {
-                    Toast.makeText(ExerciseDetailActivity.this, "You hava completed all exercises for this module. Wooohooo!", Toast.LENGTH_LONG);
-                    ExerciseDetailActivity.this.onStop();
+                    Toast.makeText(ExerciseDetailActivity.this, "You have completed all exercises for this module. Wooohooo!", Toast.LENGTH_LONG).show();
+                    finish();
                 }
             }
         });

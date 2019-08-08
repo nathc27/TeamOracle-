@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 import com.example.teamoracle.R;
 
-public class TestActivity extends AppCompatActivity {
+public class TestActivity extends AppCompatActivity implements View.OnClickListener {
 
     private TextView scoreView;
     private TextView question;

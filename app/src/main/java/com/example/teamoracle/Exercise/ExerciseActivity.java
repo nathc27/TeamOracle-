@@ -1,5 +1,6 @@
 package com.example.teamoracle.Exercise;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -8,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.example.teamoracle.DashboardActivity;
 import com.example.teamoracle.R;
 
 import java.util.List;
@@ -33,7 +35,7 @@ public class ExerciseActivity extends AppCompatActivity {
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ExerciseActivity.this.onPause(); //need to test
+                finish();
             }
         });
 

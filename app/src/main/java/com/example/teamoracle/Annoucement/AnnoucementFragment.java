@@ -22,7 +22,7 @@ import dmax.dialog.SpotsDialog;
 public class AnnoucementFragment extends Fragment {
     Context context;
     private FirebaseDatabase annoucementDatabase;
-    FirebaseLoadListener firebaseLoadListener;
+    //FirebaseLoadListener firebaseLoadListener;
     RecyclerView verticalRVParent;
     DatabaseReference annoucementData;
 
@@ -36,9 +36,9 @@ public class AnnoucementFragment extends Fragment {
 
         annoucementData = annoucementDatabase.getReference("AnnoucementData");
         //firebaseLoadListener = this;
-        verticalRVParent = rootView.findViewById(R.id.verticalRVParent);
+        //verticalRVParent = rootView.findViewById(R.id.verticalRVParent);
         verticalRVParent.setLayoutManager(new LinearLayoutManager(getContext()));
-        getCardData();
+        //getCardData();
         return rootView;
     }
 

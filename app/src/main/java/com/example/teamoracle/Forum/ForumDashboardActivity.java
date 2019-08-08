@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 import com.example.teamoracle.R;
 
@@ -19,6 +20,7 @@ public class ForumDashboardActivity extends AppCompatActivity {
     private RecyclerView postRecycler;
     private List<Post> rootPosts;
     private DBHelper db;
+    private ImageView btn_back;
 
     public static String author;
 
@@ -31,7 +33,7 @@ public class ForumDashboardActivity extends AppCompatActivity {
         text_title = findViewById(R.id.text_title);
         text_post = findViewById(R.id.text_post);
         bt_post = findViewById(R.id.bt_post);
-
+        btn_back = findViewById(R.id.btv_forum_back);
 
         author = this.getIntent().getStringExtra("Name");
         if (author == null) author = "Michael";
@@ -60,6 +62,13 @@ public class ForumDashboardActivity extends AppCompatActivity {
                 //refresh the list below
                 rootPosts = db.getRootPosts();
                 postRecycler.setAdapter(new PostAdapter(ForumDashboardActivity.this, rootPosts));
+            }
+        });
+
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
             }
         });
     }
