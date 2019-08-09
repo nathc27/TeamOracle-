@@ -55,7 +55,7 @@
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyc_responses"
-        android:layout_width="393dp"
+        android:layout_width="match_parent"
         android:layout_height="440dp"
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
