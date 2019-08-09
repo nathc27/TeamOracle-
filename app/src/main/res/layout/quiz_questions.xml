@@ -8,9 +8,9 @@
 
     <ImageView
         android:id="@+id/imageView11"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
         android:background="#FFE600"
-        android:layout_width="415dp"
-        android:layout_height="55dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/topbar" />
