@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.example.teamoracle.DashboardActivity;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -52,7 +54,7 @@ public class FinishQuizActivity extends AppCompatActivity {
             public void onClick(View view) {
                 showScores(uid);
                 FinishQuizActivity.this.finish();
-                Intent intent = new Intent(FinishQuizActivity.this, QuizActivity.class);
+                Intent intent = new Intent(FinishQuizActivity.this, DashboardActivity.class);
                 startActivity(intent);
             }
         });

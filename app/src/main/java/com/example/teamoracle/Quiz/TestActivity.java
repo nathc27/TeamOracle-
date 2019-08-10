@@ -51,6 +51,7 @@ public class TestActivity extends AppCompatActivity implements View.OnClickListe
             choice1.setTag(card);
             choice2.setTag(card);
             choice3.setTag(card);
+            choice4.setTag(card);
         }
     }
     @Override

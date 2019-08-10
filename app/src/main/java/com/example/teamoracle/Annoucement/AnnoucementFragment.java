@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.teamoracle.Quiz.Interface.FirebaseLoadListener;
 import com.example.teamoracle.R;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DatabaseReference;
@@ -22,7 +23,7 @@ import dmax.dialog.SpotsDialog;
 public class AnnoucementFragment extends Fragment {
     Context context;
     private FirebaseDatabase annoucementDatabase;
-    //FirebaseLoadListener firebaseLoadListener;
+    FirebaseLoadListener firebaseLoadListener;
     RecyclerView verticalRVParent;
     DatabaseReference annoucementData;
 
@@ -38,7 +39,7 @@ public class AnnoucementFragment extends Fragment {
         //firebaseLoadListener = this;
         //verticalRVParent = rootView.findViewById(R.id.verticalRVParent);
         verticalRVParent.setLayoutManager(new LinearLayoutManager(getContext()));
-        //getCardData();
+       // getCardData();
         return rootView;
     }
 
