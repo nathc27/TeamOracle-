@@ -13,6 +13,7 @@
         android:layout_height="60dp"
         android:background="#FFE600"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -20,12 +21,11 @@
         android:layout_width="127dp"
         android:layout_height="39dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="140dp"
-        android:layout_marginRight="140dp"
         android:text="Content"
-        android:textSize="30dp"
         android:textColor="@color/black"
+        android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent" />
 
 
@@ -33,11 +33,11 @@
         android:id="@+id/recyc_exercise"
         android:layout_width="406dp"
         android:layout_height="641dp"
-        android:layout_marginTop="12dp"
         android:orientation="vertical"
         android:padding="5dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView">
 
     </android.support.v7.widget.RecyclerView>
