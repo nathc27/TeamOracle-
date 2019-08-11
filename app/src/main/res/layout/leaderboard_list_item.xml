@@ -7,7 +7,7 @@
     android:layout_marginHorizontal="8dp"
     android:layout_marginVertical="12dp"
     android:padding="24dp"
-    app:cardBackgroundColor="#50ffffff"
+    app:cardBackgroundColor="@color/colorPrimary"
     card_view:cardElevation="0dp"
     card_view:cardCornerRadius="4dp">
 
@@ -22,7 +22,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="name"
-            android:textColor="#fff"
+            android:textColor="@color/black"
             android:padding="16dp"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -35,7 +35,7 @@
             android:layout_alignParentEnd="true"
             android:padding="16dp"
             android:text="total"
-            android:textColor="#ffff"
+            android:textColor="@color/black"
             android:textSize="18sp" />
 
 
