@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.example.teamoracle.DashboardActivity;
 import com.example.teamoracle.R;
+import com.example.teamoracle.Quiz.User;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -57,10 +58,10 @@ public class ProfileFragment extends Fragment {
             }
         });
 
-       // profileName = rootView.findViewById(R.id.profileName);
-        //profileEmail = rootView.findViewById(R.id.profileEmail);
-        //information = rootView.findViewById(R.id.information);
-        //level = rootView.findViewById(R.id.level);
+        profileName = rootView.findViewById(R.id.tv_username);
+        profileEmail = rootView.findViewById(R.id.tv_email);
+        score = rootView.findViewById(R.id.total);
+        level = rootView.findViewById(R.id.tv_position);
         logOutButton = rootView.findViewById(R.id.logOutButton);
         logOutButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,10 +77,27 @@ public class ProfileFragment extends Fragment {
             User user = new User();
             user.setName(ds.child(userId).getValue(User.class).getName());
             user.setEmail(ds.child(userId).getValue(User.class).getEmail());
-            //user.setTotal(ds.child(userId).getValue(User.class).getTotal());
+            user.setTotal(ds.child(userId).getValue(User.class).getTotal());
 
             profileName.setText(user.getName());
             profileEmail.setText(user.getEmail());
+            score.setText(String.valueOf(user.getTotal()));
+
+            final int scoreConvert = Integer.parseInt(String.valueOf(user.getTotal()));
+            final String score = String.valueOf(user.getTotal());
+
+            if ((scoreConvert >= 0) && (1000 >= scoreConvert)) {
+                level.setText("Novice");
+            }
+            else if ((scoreConvert >= 1001) && (2000 >= scoreConvert)) {
+                level.setText("Adept");
+            }
+            else if ((scoreConvert >= 2001) && (3000 >= scoreConvert)) {
+                level.setText("Expert");
+            }
+            else {
+                level.setText("Master of INFS1609");
+            }
         }
     }
     void signOut() {
