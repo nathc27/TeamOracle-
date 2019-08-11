@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import com.example.teamoracle.Content.ContentData.ContentCardData;
 import com.example.teamoracle.Content.ContentInterface.ContentOnClickListener;
-import com.example.teamoracle.Quiz.StartQuizActivity;
+import com.example.teamoracle.Content.LessonActivity;
 import com.example.teamoracle.R;
 
 import java.util.List;
@@ -41,7 +41,7 @@ public class ContentHorizontalAdapter extends RecyclerView.Adapter<ContentHorizo
             @Override
             public void onClick(View view) {
                 if(contentCardDataList.get(position).getContentCardId().contains("C")) {
-                    Intent intent = new Intent(context, StartQuizActivity.class);
+                    Intent intent = new Intent(context, LessonActivity.class);
                     intent.putExtra("contentCardId", contentCardDataList.get(position).getContentCardId());
                     intent.putExtra("youtubeId", contentCardDataList.get(position).getContentCardName());
                     intent.putExtra("contentInformation", contentCardDataList.get(position).getContentCardName());
