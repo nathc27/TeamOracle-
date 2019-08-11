@@ -11,6 +11,8 @@ import com.example.teamoracle.Annoucement.AnnoucementFragment;
 import com.example.teamoracle.Learn.LearnFragment;
 import com.example.teamoracle.R;
 import com.example.teamoracle.profile.ProfileFragment;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.FirebaseOptions;
 
 public class ContentActivity extends AppCompatActivity {
 
@@ -41,6 +43,13 @@ public class ContentActivity extends AppCompatActivity {
         navigation.setSelectedItemId(R.id.navigation_learn);
 
         loadFragment(new ContentFragment());
+
+        FirebaseOptions optionsQuiz = new FirebaseOptions.Builder()
+                .setApplicationId("1:990405671822:android:8c9b9bfc66f08c97")
+                .setApiKey("AIzaSyDsjj1OYbeFg0uT2JHSQ5nuqOHLRvcofCY")
+                .setDatabaseUrl("https://content-53ed4.firebaseio.com/")
+                .build();
+        FirebaseApp.initializeApp(this, optionsQuiz, "Topics");
     }
 
     private boolean loadFragment(Fragment fragment) {
