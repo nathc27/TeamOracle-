@@ -7,9 +7,9 @@ import android.widget.TextView;
 import com.example.teamoracle.R;
 
 import org.w3c.dom.Text;
-
-public class AnnoucementAdapter {
 /*
+public class AnnoucementAdapter {
+
 
 
 
@@ -32,5 +32,6 @@ public class AnnoucementAdapter {
             tv_announcement_author = itemView.findViewById(R.id.tv_announcement_author);
         }
     }
-    */
+
 }
+*/
