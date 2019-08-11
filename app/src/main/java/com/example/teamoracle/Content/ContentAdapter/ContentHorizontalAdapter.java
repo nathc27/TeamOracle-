@@ -43,8 +43,8 @@ public class ContentHorizontalAdapter extends RecyclerView.Adapter<ContentHorizo
                 if(contentCardDataList.get(position).getContentCardId().contains("C")) {
                     Intent intent = new Intent(context, LessonActivity.class);
                     intent.putExtra("contentCardId", contentCardDataList.get(position).getContentCardId());
-                    intent.putExtra("youtubeId", contentCardDataList.get(position).getContentCardName());
-                    intent.putExtra("contentInformation", contentCardDataList.get(position).getContentCardName());
+                    intent.putExtra("youtubeId", contentCardDataList.get(position).getYoutubeId());
+                    intent.putExtra("contentInformation", contentCardDataList.get(position).getContentInformation());
                     intent.putExtra("card", contentCardDataList.get(position).getContentCardId());
                     context.startActivity(intent);
 

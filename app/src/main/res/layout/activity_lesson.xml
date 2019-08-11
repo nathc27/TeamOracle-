@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bck2"
+    android:background="@color/cardview_dark_background"
     tools:context=".Content.LessonActivity">
 
 
@@ -52,6 +52,7 @@
                 android:padding="16dp"
                 android:text="Back to lessons"
                 android:textColor="@android:color/white"
+                android:background="#00AEEF"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

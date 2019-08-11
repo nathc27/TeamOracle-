@@ -27,12 +27,12 @@ public class LessonActivity extends AppCompatActivity {
         // Receives corresponding YouTube tail from LearnFragment cards
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
-            String learnInformation = (String) extras.get("learnInformation");
-            final String youtube = (String) extras.get("youtube");
+            String contentInformation = (String) extras.get("contentInformation");
+            final String youtube = (String) extras.get("youtubeId");
 
             Log.d(TAG, "onClick: Initialising YouTube Player.");
             YouTubePlayerFragment youtubeFragment = (YouTubePlayerFragment) getFragmentManager().findFragmentById(R.id.youtubeFragment);
-            youtubeFragment.initialize("AIzaSyABzb30H7e266HUeV4iYRVjfrvwM_xAgi0", new YouTubePlayer.OnInitializedListener() {
+            youtubeFragment.initialize("AIzaSyDntCr070B48_hPAp1DUStDWvgktpwLJbk", new YouTubePlayer.OnInitializedListener() {
                 @Override
                 public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
                     youTubePlayer.cueVideo(youtube);
@@ -46,7 +46,7 @@ public class LessonActivity extends AppCompatActivity {
             });
 
             information = findViewById(R.id.lesson);
-            information.setText(learnInformation);
+            information.setText(contentInformation);
             back = findViewById(R.id.goBackButton);
             back.setOnClickListener(new View.OnClickListener() {
                 @Override
