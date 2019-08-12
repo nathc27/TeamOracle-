@@ -123,29 +123,6 @@
         </LinearLayout>
 
 
-        <LinearLayout
-            android:id="@+id/tv_phone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:orientation="horizontal"
-            android:paddingLeft="25dp">
-
-            <ImageView
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:background="@drawable/icphone" />
-
-            <TextView
-                android:layout_width="wrap_content"
-
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:paddingLeft="20dp"
-                android:text="+000 000 00"
-                android:textStyle="bold" />
-        </LinearLayout>
-
         <Button
 
             android:id="@+id/logOutButton"
