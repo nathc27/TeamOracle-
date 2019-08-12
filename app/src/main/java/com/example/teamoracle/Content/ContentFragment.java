@@ -2,6 +2,7 @@ package com.example.teamoracle.Content;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -12,12 +13,14 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.teamoracle.Content.ContentAdapter.ContentVerticalAdapter;
 import com.example.teamoracle.Content.ContentData.ContentCardData;
 import com.example.teamoracle.Content.ContentData.ContentCards;
 import com.example.teamoracle.Content.ContentInterface.ContentFirebaseLoadListener;
+import com.example.teamoracle.DashboardActivity;
 import com.example.teamoracle.Quiz.Adapter.VerticalAdapter;
 import com.example.teamoracle.Quiz.TopicCards;
 import com.example.teamoracle.Quiz.Topics;
@@ -41,6 +44,7 @@ public class ContentFragment extends Fragment implements ContentFirebaseLoadList
     RecyclerView rvContent;
     ContentFirebaseLoadListener contentFirebaseLoadListener;
     DatabaseReference contentData;
+    ImageView backButton;
 
 
     @Nullable

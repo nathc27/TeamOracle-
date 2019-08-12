@@ -46,11 +46,11 @@ public class AnnoucementFragment extends Fragment {
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_annoucement, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_announcement2, container, false);
 
-        RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.rvAnnoucement);
+        //RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.rvAnnoucement);
 
-        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+      //  recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
        // RecyclerView.Adapter mAdapter = new AnnoucementAdapter(this, Annoucements.getDummyAnnoucements());
         //recyclerView.setAdapter(mAdapter);
 
