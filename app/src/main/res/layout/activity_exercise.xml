@@ -101,10 +101,11 @@
             android:id="@+id/imageView21"
             android:layout_width="367dp"
             android:layout_height="169dp"
+            android:layout_marginTop="40dp"
             android:background="@drawable/bck1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="86dp" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_ec_topic" />
 
 </android.support.constraint.ConstraintLayout>
 </ScrollView>
