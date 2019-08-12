@@ -9,10 +9,11 @@
         android:id="@+id/imageView13"
         android:layout_width="422dp"
         android:layout_height="56dp"
+        android:background="@drawable/topbar"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/topbar"
-        android:background="@drawable/topbar" />
+        app:srcCompat="@drawable/topbar" />
 
     <TextView
         android:id="@+id/textView2"
@@ -43,13 +44,12 @@
         style="@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox.Dense"
         android:layout_width="349dp"
         android:layout_height="111dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
         android:layout_marginTop="88dp"
         android:ems="10"
         android:gravity="start|top"
         android:hint="Add new post"
         android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView13" />
 
@@ -58,10 +58,10 @@
         android:layout_width="73dp"
         android:layout_height="43dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
         android:text="Post"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.88"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_post" />
 
     <android.support.v7.widget.RecyclerView
@@ -70,22 +70,18 @@
         android:layout_height="392dp"
         android:layout_marginTop="28dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bt_post" />
 
     <EditText
         android:id="@+id/text_title"
         android:layout_width="348dp"
         android:layout_height="43dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginBottom="20dp"
         android:hint="Add Title"
         app:layout_constraintBottom_toTopOf="@+id/text_post"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
         app:layout_constraintVertical_bias="1.0" />
