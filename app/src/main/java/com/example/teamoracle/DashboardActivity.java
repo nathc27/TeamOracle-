@@ -30,6 +30,7 @@ public class DashboardActivity extends AppCompatActivity implements BottomNaviga
             return;
         }
 
+
         // Sets the Learn tab as the default tab
         BottomNavigationView navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(this);
@@ -38,13 +39,14 @@ public class DashboardActivity extends AppCompatActivity implements BottomNaviga
         // Loads the selected fragment
         loadFragment(new LearnFragment());
 
-        // Connects the Learn database
-        FirebaseOptions optionsLearn = new FirebaseOptions.Builder()
-                .setApplicationId("1:62125859406:android:c7b3867e4f759f5e")
-                .setApiKey("AIzaSyB5gBPq8CySbeSSkEJd1Vrb3_cPDxvL40A")
-                .setDatabaseUrl("https://rvpop-a60e9.firebaseio.com/")
+        FirebaseOptions optionsAnnoucement = new FirebaseOptions.Builder()
+                .setApplicationId("1:419069041986:android:8c9b9bfc66f08c97")
+                .setApiKey("AIzaSyAZOt0VaIsnF3NQCYJ_h6oSYO26T6TDDtU")
+                .setDatabaseUrl("https://announcementdata.firebaseio.com/")
                 .build();
-        FirebaseApp.initializeApp(this, optionsLearn, "Learn");
+        FirebaseApp.initializeApp(this, optionsAnnoucement, "Annoucement");
+
+        // Connects the Learn database
     }
 
     private boolean loadFragment(Fragment fragment) {

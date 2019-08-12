@@ -39,7 +39,7 @@
         app:srcCompat="@drawable/rightarrowleft" />
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerView2"
+        android:id="@+id/rvAnnoucement"
         android:layout_width="match_parent"
         android:layout_height="562dp"
         android:layout_marginTop="8dp"
@@ -70,7 +70,7 @@
         android:layout_marginBottom="8dp"
         android:background="@drawable/bck1"
         android:text="Add"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerView2"
+        app:layout_constraintBottom_toTopOf="@+id/rvAnnoucement"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tv_add_announcement" />
 

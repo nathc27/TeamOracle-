@@ -14,7 +14,7 @@ public class Questions {
 
     public Questions(){}
 
-    public Questions(String question, String choice1, String choice2, String choice3, String correct, String category) {
+    public Questions(String question, String choice1, String choice2, String choice3, String choice4, String correct, String category) {
         this.question = question;
         this.choice1 = choice1;
         this.choice2 = choice2;
@@ -55,71 +55,115 @@ public class Questions {
     public static ArrayList<Questions> getDummyQuestions() {
         ArrayList<Questions> set = new ArrayList<>();
 
-        set.add(new Questions("When creating a new project, the first layer is","unlocked by default","locked by default","hidden by default","locked by default","T1"));
-        set.add(new Questions("The file format for a Photoshop file is a","AI","PNG","PSD","PSD","T1"));
-        set.add(new Questions("The shortcut to undo an action more than once is","CTRL + ALT + Z","CTRL + Z","CTRL + SHIFT + Z","CTRL + ALT + Z","T1"));
-        set.add(new Questions("The first option in the Layer Style window is ","Contour","Stroke","Bevel & Emboss","Bevel & Emboss","T1"));
-        set.add(new Questions("Which of the following is not a blending mode?","Soft Light","Vivid Burn","Hue","Vivid Burn","T1"));
-        set.add(new Questions("Select the best method/tool to change a specific color","Colour range","Selective Colour","Hue","Colour range","T1"));
-        set.add(new Questions("In the stacking order, which layer would appear first in an image?","The selected layer","The bottom layer","The top layer","The top layer","T1"));
-        set.add(new Questions("What tool allows you to remove/erase part of a layer using a free-hand method?","Magic Wand tool","Eraser tool","Pen tool","Eraser tool","T1"));
-        set.add(new Questions("Setting the width of an image from 100px to -100px would","Make it disappear","Reflect it along the horizontal axis","Reflect it along the vertical axis","Reflect it along the horizontal axis","T1"));
-        set.add(new Questions("A shortcut for rotating an image is","CTRL + R","CTRL + T","CTRL + D","CTRL + T","T1"));
+        set.add(new Questions("The extension name of a Java source code file is",".java",".obj",".class",".exe",".java","T1"));
+        set.add(new Questions("________  provides an integrated development environment (IDE) for rapidly developing Java programs. Editing, compiling, building, debugging, and online help are integrated in one graphical user interface. ","Java language specification","Java API","Java JDK",".exe","Java IDE","T1"));
+        set.add(new Questions("Every statement in Java ends with ________.","a semicolon (;)"," a comma (,)","a period (.)","an asterisk (*)","a semicolon (;)","T1"));
+        set.add(new Questions(" ________  is a technical definition of the language that includes the syntax and semantics of the Java programming language.","Java language specification","Java API","Java JDK","Java IDE","Java language specification","T1"));
+        set.add(new Questions("________ contains predefined classes and interfaces for developing Java programs."," Java language specification","Java API","Java JDK","Java IDE","Java API","T1"));
+        set.add(new Questions("Which of the following statements is correct?","Every line in a program must end with a semicolon.","Every statement in a program must end with a semicolon.","Every comment line must end with a semicolon.","Every method must end with a semicolon.","Every statement in a program must end with a semicolon.","T1"));
+        set.add(new Questions("Which JDK command is correct to run a Java application in ByteCode.class?","java ByteCode","java ByteCode.class","javac ByteCode.java","javac ByteCode","java ByteCode","T1"));
+        set.add(new Questions("Java compiler translates Java source code into _________.","Java bytecode","machine code","assembly code","another high-level language code","Java bytecode","T1"));
+        set.add(new Questions("A block is enclosed inside __________.","parentheses","braces","brackets","quotes",".braces","T1"));
+        set.add(new Questions("If a program compiles fine, but it produces incorrect result, then the program suffers  __________.","a compilation error","a runtime error","a logic error","none of the above","a logic error","T1"));
 
-        set.add(new Questions("Pressing the letter _ will select the Rectangle tool","R","M","T","M","T2"));
-        set.add(new Questions("Which of the following is used to convert a raster image to a vector image?","Live Trace","Live Convert","Live Pixels","Live Trace","T2"));
-        set.add(new Questions("Pressing the letter _ will select the Eyedropper tool","I","E","Y","I","T2"));
-        set.add(new Questions("The Pathfinder tool is used to","combine objects into new shapes","view all previous actions","find a path","combine objects into new shapes","T2"));
-        set.add(new Questions("Which of the following is not a Shape Mode?","Unite","Double","Intersect","Double","T2"));
-        set.add(new Questions("Pressing the letter Q will select the","Lasso tool","Gradient tool","Quadrant tool","Lasso tool","T2"));
-        set.add(new Questions("An artboard is","the printable region within a document","the non-printable region within a document","not an element of Illustrator","the printable region within a document","T2"));
-        set.add(new Questions("Select > Same > Fill Colour will","Select shapes with the same colour","Fill shapes with the same colour","Select and fill shapes with the same colour","Select shapes with the same colour","T2"));
-        set.add(new Questions("How would you make a stroke wider?","Stroke tool","Width tool","Height tool","Width tool","T2"));
-        set.add(new Questions("Pressing the letter __ will select the Direct Selection tool","A","D","S","A","T2"));
+        set.add(new Questions("Suppose a Scanner object is created as follows:\n" + "\n" + "Scanner input = new Scanner(System.in);\n" + "\n" + "What method do you use to read an int value?\n", "input.nextInt();","input.nextInteger();"," input.int();","input.integer();","input.nextInt();","T2"));
+        set.add(new Questions("_______ is the code with natural language mixed with Java code","Java program","A Java statement","Pseudocode",".A flowchart diagram","Pseudocode ","T2"));
+        set.add(new Questions("Every letter in a Java keyword is in lowercase?","true","false"," "," "," ","T2"));
+        set.add(new Questions("Which of the following are correct names for variables according to Java naming conventions?","radius","Radius","RADIUS","FindArea","radius","T2"));
+        set.add(new Questions("To declare a constant MAX_LENGTH inside a method with value 99.98, you write","final MAX_LENGTH = 99.98;","final float MAX_LENGTH = 99.98;","double MAX_LENGTH = 99.98;","final double MAX_LENGTH = 99.98;","final double MAX_LENGTH = 99.98;","T2"));
+        set.add(new Questions("To declare an int variable number with initial value 2, you write","int number = 2L;","int number = 2l;","int number = 2;","int number = 2.0;","int number = 2;","T2"));
+        set.add(new Questions("The expression 4 + 20 / (3 - 1) * 2 is evaluated to","4","20","24","9","24","T2"));
+        set.add(new Questions("Suppose x is 1. What is x after x += 2?","0","1","2","3","3","T2"));
+        set.add(new Questions("Which of the following expression results in 45.37? ","(int)(45.378 * 100) / 100 ","(int)(45.378 * 100) / 100.0 ","(int)(45.378 * 100 / 100) ","(int)(45.378) * 100 / 100.0 ","(int)(45.378 * 100) / 100.0","T2"));
+        set.add(new Questions("Analyze the following code.\n" + "\n" + "public class Test {\n" + "  public static void main(String[] args) {\n" + "    int month = 09;\n" + "    System.out.println(\"month is \" + month);\n" + "  }  \n" + "}\n","The program displays month is 09","The program displays month is 9","The program displays month is 9.0","The program has a syntax error, because 09 is an incorrect literal value.","The program has a syntax error, because 09 is an incorrect literal value.","T2"));
 
-        set.add(new Questions("Pressing the letter _ will select the Selection tool","V","S","M","V","T3"));
-        set.add(new Questions("Pressing the letter _ will select the Razor tool","R","C","Z","C","T3"));
-        set.add(new Questions("The timeline is the","graphical element where video, audio, and graphics clips are arranged","historical log of all changes","placeholder for imported videos","graphical element where video, audio, and graphics clips are arranged","T3"));
-        set.add(new Questions("A hard cut ","is the final version of a video production","is the immediate transition from one clip to the next","is a trim of more than 20 seconds","is the immediate transition from one clip to the next","T3"));
-        set.add(new Questions("Which of the following is not a transition folder?","Dissolve","Iris","Swipe","Swipe","T3"));
-        set.add(new Questions("Where do you go to change the options of an Effect?","Effect Options","Effect Controls","Effects","Effect Controls","T3"));
-        set.add(new Questions("Which format would you export a video in if you wanted to put it on the web?","H.264","H2.64","H.246","H.264","T3"));
-        set.add(new Questions("A tracking mask and mosaic blur are typically used for","Number plates","Hands","Apples","Number plates","T3"));
-        set.add(new Questions("If you are filming upside down, it is best to flip your footage","horizontally","vertically","both horizontally and vertically","both horizontally and vertically","T3"));
-        set.add(new Questions("The Razor tool","cuts a clip into two clips","trims the edge of a clip","cuts a clip into multiple clips","cuts a clip into two clips","T3"));
+        set.add(new Questions("Suppose a Scanner object is created as follows:\n" + "\n" + "Scanner input = new Scanner(System.in);\n" + "\n" + "What method do you use to read an int value?\n", "input.nextInt();","input.nextInteger();"," input.int();","input.integer();","input.nextInt();","T3"));
+        set.add(new Questions("_______ is the code with natural language mixed with Java code","Java program","A Java statement","Pseudocode",".A flowchart diagram","Pseudocode ","T3"));
+        set.add(new Questions("Every letter in a Java keyword is in lowercase?","true","false"," "," "," ","T3"));
+        set.add(new Questions("Which of the following are correct names for variables according to Java naming conventions?","radius","Radius","RADIUS","FindArea","radius","T3"));
+        set.add(new Questions("To declare a constant MAX_LENGTH inside a method with value 99.98, you write","final MAX_LENGTH = 99.98;","final float MAX_LENGTH = 99.98;","double MAX_LENGTH = 99.98;","final double MAX_LENGTH = 99.98;","final double MAX_LENGTH = 99.98;","T3"));
+        set.add(new Questions("To declare an int variable number with initial value 2, you write","int number = 2L;","int number = 2l;","int number = 2;","int number = 2.0;","int number = 2;","T3"));
+        set.add(new Questions("The expression 4 + 20 / (3 - 1) * 2 is evaluated to","4","20","24","9","24","T3"));
+        set.add(new Questions("Suppose x is 1. What is x after x += 2?","0","1","2","3","3","T3"));
+        set.add(new Questions("Which of the following expression results in 45.37? ","(int)(45.378 * 100) / 100 ","(int)(45.378 * 100) / 100.0 ","(int)(45.378 * 100 / 100) ","(int)(45.378) * 100 / 100.0 ","(int)(45.378 * 100) / 100.0","T3"));
+        set.add(new Questions("Analyze the following code.\n" + "\n" + "public class Test {\n" + "  public static void main(String[] args) {\n" + "    int month = 09;\n" + "    System.out.println(\"month is \" + month);\n" + "  }  \n" + "}\n","The program displays month is 09","The program displays month is 9","The program displays month is 9.0","The program has a syntax error, because 09 is an incorrect literal value.","The program has a syntax error, because 09 is an incorrect literal value.","T3"));
 
-        set.add(new Questions("To edit frame by frame, you could use the ______ keys","left and right","up and down","page up and page down","page up and page down","T4"));
-        set.add(new Questions("A null object","is an invisible layer that you can create to be a super parent","is an empty layer you can create to be a super parent","does not exist","is an invisible layer that you can create to be a super parent","T4"));
-        set.add(new Questions("The notation for 'frames per second' is","fps","fp/s","p","p","T4"));
-        set.add(new Questions("Pressing the letter _ will set the beginning of a work area to the current time","N","E","B","B","T4"));
-        set.add(new Questions("Pressing the letter _ will set the end of a work area to the current time","E","B","N","N","T4"));
-        set.add(new Questions("Which 'view' will After Effects render out?","Front","Active Camera","Current View","Active Camera","T4"));
-        set.add(new Questions("After Effects is primarily used for","photo editing","video editing","motion graphics","motion graphics","T4"));
-        set.add(new Questions("Which of the following can be used to achieve a glitch effect?","Twitch","Posterise time","All of the above","All of the above","T4"));
-        set.add(new Questions("The action that creates relationships between layer properties is known as","Pick Whipping","Project Lock","Layer Connect","Pick Whipping","T4"));
-        set.add(new Questions("When a layer is selected, pressing enter will","delete the layer","allow you to change the name","lock the layer","allow you to change the name","T4"));
+        set.add(new Questions("Suppose a Scanner object is created as follows:\n" + "\n" + "Scanner input = new Scanner(System.in);\n" + "\n" + "What method do you use to read an int value?\n", "input.nextInt();","input.nextInteger();"," input.int();","input.integer();","input.nextInt();","T4"));
+        set.add(new Questions("_______ is the code with natural language mixed with Java code","Java program","A Java statement","Pseudocode",".A flowchart diagram","Pseudocode ","T4"));
+        set.add(new Questions("Every letter in a Java keyword is in lowercase?","true","false"," "," "," ","T4"));
+        set.add(new Questions("Which of the following are correct names for variables according to Java naming conventions?","radius","Radius","RADIUS","FindArea","radius","T4"));
+        set.add(new Questions("To declare a constant MAX_LENGTH inside a method with value 99.98, you write","final MAX_LENGTH = 99.98;","final float MAX_LENGTH = 99.98;","double MAX_LENGTH = 99.98;","final double MAX_LENGTH = 99.98;","final double MAX_LENGTH = 99.98;","T4"));
+        set.add(new Questions("To declare an int variable number with initial value 2, you write","int number = 2L;","int number = 2l;","int number = 2;","int number = 2.0;","int number = 2;","T4"));
+        set.add(new Questions("The expression 4 + 20 / (3 - 1) * 2 is evaluated to","4","20","24","9","24","T4"));
+        set.add(new Questions("Suppose x is 1. What is x after x += 2?","0","1","2","3","3","T4"));
+        set.add(new Questions("Which of the following expression results in 45.37? ","(int)(45.378 * 100) / 100 ","(int)(45.378 * 100) / 100.0 ","(int)(45.378 * 100 / 100) ","(int)(45.378) * 100 / 100.0 ","(int)(45.378 * 100) / 100.0","T4"));
+        set.add(new Questions("Analyze the following code.\n" + "\n" + "public class Test {\n" + "  public static void main(String[] args) {\n" + "    int month = 09;\n" + "    System.out.println(\"month is \" + month);\n" + "  }  \n" + "}\n","The program displays month is 09","The program displays month is 9","The program displays month is 9.0","The program has a syntax error, because 09 is an incorrect literal value.","The program has a syntax error, because 09 is an incorrect literal value.","T4"));
 
-        set.add(new Questions("_______ is a way to group photos in one place for easy viewing","Collection","Grouping","Collage","Collection","T5"));
-        set.add(new Questions("_______ add description to an image","Filters","Keywords","Tags","Keywords","T5"));
-        set.add(new Questions("Red eye correction","eliminates the red from around an eye","adds red to an eye","eliminates red from the center of an eye","eliminates red from the center of an eye","T5"));
-        set.add(new Questions("Pressing the letter H","displays the proprties of a photo","hides and reveals a tool","select the hue tool","hides and reveals a tool","T5"));
-        set.add(new Questions("Changing the tint","adjusts the green and magenta of an image","adjusts all colours in an image","adjusts the monochromatic colours in an image","adjusts the green and magenta of an image","T5"));
-        set.add(new Questions("Pressing the letter F","flips a photo","changes the font","displays a full screen preview","displays a full screen preview","T5"));
-        set.add(new Questions("The grid","shows all images that have been imported","displays gridlines","shows where edits have been made","shows all images that have been imported","T5"));
-        set.add(new Questions("Pressing the tab key","turns on and off the left and right panels","switches between photos","displays a full screen preview","turns on and off the left and right panels","T5"));
-        set.add(new Questions("The clarity sides adds or removes","opacity","blurriness","mid-tone contrast","mid-tone contrast","T5"));
-        set.add(new Questions("Split toning involves","applying one colour to the shadows and another to the highlights","applying contrasting colours","applying only two colours","applying one colour to the shadows and another to the highlights","T5"));
+        set.add(new Questions("The 'less than or equal to' comparison operator in Java is __________","<","<=","=<","<<","<=","T5"));
+        set.add(new Questions("In Java, the word true is ________.","a Java keyword","a Boolean literal ","same as value 1","same as value 0","a Boolean literal","T5"));
+        set.add(new Questions("Suppose income is 4001, what is the output of the following code:\n" + "\n" + "if (income > 3000) {\n" + "  System.out.println(\"Income is greater than 3000\");\n" + "}\n" + "else if (income > 4000) {\n" + "  System.out.println(\"Income is greater than 4000\");\n","no output","Income is greater than 3000 ","Income is greater than 3000 followed by Income is greater than 4000","Income is greater than 4000","Income is greater than 3000 ","T5"));
+        set.add(new Questions("What is the output from System.out.println((int)Math.random() * 4)?","0","1","2","3","0","T5"));
+        set.add(new Questions("The __________ method immediately terminates the program.","System.terminate(0);","System.halt(0);","System.exit(0);","System.quit(0);","System.exit(0);","T5"));
+        set.add(new Questions("Suppose isPrime is a boolean variable, which of the following is the correct and best statement for testing if isPrime is true. ","if (isPrime = true) ","if (isPrime == true) ","if (isPrime)","if (!isPrime = false) ","if (isPrime)","T5"));
+        set.add(new Questions("Analyze the following program fragment:\n" + "\n" + "int x;\n" + "double d = 1.5;\n" + "\n" + "switch (d) {\n" + "  case 1.0: x = 1;\n" + "  case 1.5: x = 2;\n" + "  case 2.0: x = 3;\n" + "}\n","The program has a compile error because the required break statement is missing in the switch statement.","The program has a compile error because the required default case is missing in the switch statement.","The switch control variable cannot be double.","No errors.","The switch control variable cannot be double.","T5"));
+        set.add(new Questions("The following code displays ___________.\n" + "\n" + "double temperature = 50;\n" + "\n" + "if (temperature >= 100)\n" + "  System.out.println(\"too hot\");\n" + "else if (temperature <= 40)\n" + "  System.out.println(\"too cold\");\n" + "else\n" + "  System.out.println(\"just right\");\n","too hot","too cold",".just right","too hot too cold just right","just right","T5"));
+        set.add(new Questions("Which of the following is the correct expression that evaluates to true if the number x is between 1 and 100 or the number is negative? ","1 < x < 100 && x < 0","((x < 100) && (x > 1)) || (x < 0)","((x < 100) && (x > 1)) && (x < 0)","(1 > x >  100) || (x < 0)","((x < 100) && (x > 1)) || (x < 0)","T5"));
+        set.add(new Questions("Assume x = 4 and y = 5, Which of the following is true?","x < 5 && y < 5","x < 5 || y < 5","x > 5 && y > 5","x > 5 || y > 5","x < 5 || y < 5","T5"));
 
-        set.add(new Questions("Which of the following is an appropriate colour setting for print?","RGB","PSD","MDK","RGB","T6"));
-        set.add(new Questions("What is a gutter?","The space between each artboard","The space between each column","The space at the top of a page","The space between each column","T6"));
-        set.add(new Questions("What is kerning?","The process of adjusting the spacing between characters in a proportional font","The process of adjusting the height of letters","The process of adjusting the width of letters","The process of adjusting the spacing between characters in a proportional font","T6"));
-        set.add(new Questions("Title Case","capitalises the first word","capitalises the first letter of each word","capitalises the heading","capitalises the first letter of each word","T6"));
-        set.add(new Questions("Tracking","affects the space between a word or paragraph","creates an outline around each letter","creates a path for each layer","affects the space between a word or paragraph","T6"));
-        set.add(new Questions("Margins are the","border around a page","blank areas around the sides of a page","blank areas around a body of text","blank areas around the sides of a page","T6"));
-        set.add(new Questions("If you are working on a file that has 300 pages of high resolution images, you would use","fast display","typical display","high quality display","fast display","T6"));
-        set.add(new Questions("The master page contains","repeating elements for each page of a document","all InDesign shortcuts","a blank view","repeating elements for each page of a document","T6"));
-        set.add(new Questions("InDesign is typically used for","publishing and typesetting","creating vector graphics","video editing","publishing and typesetting","T6"));
-        set.add(new Questions("To avoid creep","create a box around the page","place elements 5mm from the edge","place elements far enough from the edge","place elements far enough from the edge","T6"));
+        set.add(new Questions("How many times will the following code print \"Welcome to Java\"?\n" + "\n" + "int count = 0;\n" + "while (count < 10) {\n" + "  System.out.println(\"Welcome to Java\");\n" + "  count++;\n" + "}\n","8","9","10","11","10","T6"));
+        set.add(new Questions("What the output of the following code:\n" + "\n" + "for ( ; ; ) \n" + "  System.out.println(\"Welcome to Java\");\n","does not print anything.","prints out Welcome to Java one time.","prints out Welcome to Java two times.","prints out Welcome to Java forever.","prints out Welcome to Java forever.","T6"));
+        set.add(new Questions("Which of the loop statements always have their body executed at least once.","The while loop","The do-while loop","The for loop"," ","The do-while loop","T6"));
+        set.add(new Questions("Which of the following is the correct expression that evaluates to true if the number x is between 1 and 100 or the number is negative? ","1 < x < 100 && x < 0","((x < 100) && (x > 1)) || (x < 0)","((x < 100) && (x > 1)) && (x < 0)","(1 > x >  100) || (x < 0)","((x < 100) && (x > 1)) || (x < 0)","T6"));
+        set.add(new Questions("Assume x = 4 and y = 5, Which of the following is true?","x < 5 && y < 5","x < 5 || y < 5","x > 5 && y > 5","x > 5 || y > 5","x < 5 || y < 5","T6"));
+        set.add(new Questions("The expression 4 + 20 / (3 - 1) * 2 is evaluated to","4","20","24","9","24","T6"));
+        set.add(new Questions("Suppose x is 1. What is x after x += 2?","0","1","2","3","3","T6"));
+        set.add(new Questions("Java compiler translates Java source code into _________.","Java bytecode","machine code","assembly code","another high-level language code","Java bytecode","T6"));
+        set.add(new Questions("A block is enclosed inside __________.","parentheses","braces","brackets","quotes",".braces","T6"));
+        set.add(new Questions("Analyze the following statement:\n" + "\n" + "double sum = 0;\n" + "for (double d = 0; d < 10;) {\n" + "  d += 0.1;\n" + "  sum += sum + d;\n" + "}\n","The program has a compile error because the adjustment is missing in the for loop.","The program has a compile error because the control variable in the for loop cannot be of the double type.","The program runs in an infinite loop because d&lt;10 would always be true.","The program compiles and runs fine.","The program compiles and runs fine.","T6"));
+
+        set.add(new Questions("The extension name of a Java source code file is",".java",".obj",".class",".exe",".java","T7"));
+        set.add(new Questions("________  provides an integrated development environment (IDE) for rapidly developing Java programs. Editing, compiling, building, debugging, and online help are integrated in one graphical user interface. ","Java language specification","Java API","Java JDK",".exe","Java IDE","T7"));
+        set.add(new Questions("Every statement in Java ends with ________.","a semicolon (;)"," a comma (,)","a period (.)","an asterisk (*)","a semicolon (;)","T7"));
+        set.add(new Questions(" ________  is a technical definition of the language that includes the syntax and semantics of the Java programming language.","Java language specification","Java API","Java JDK","Java IDE","Java language specification","T7"));
+        set.add(new Questions("________ contains predefined classes and interfaces for developing Java programs."," Java language specification","Java API","Java JDK","Java IDE","Java API","T7"));
+        set.add(new Questions("Which of the following statements is correct?","Every line in a program must end with a semicolon.","Every statement in a program must end with a semicolon.","Every comment line must end with a semicolon.","Every method must end with a semicolon.","Every statement in a program must end with a semicolon.","T7"));
+        set.add(new Questions("Which JDK command is correct to run a Java application in ByteCode.class?","java ByteCode","java ByteCode.class","javac ByteCode.java","javac ByteCode","java ByteCode","T7"));
+        set.add(new Questions("Java compiler translates Java source code into _________.","Java bytecode","machine code","assembly code","another high-level language code","Java bytecode","T7"));
+        set.add(new Questions("A block is enclosed inside __________.","parentheses","braces","brackets","quotes",".braces","T7"));
+        set.add(new Questions("If a program compiles fine, but it produces incorrect result, then the program suffers  __________.","a compilation error","a runtime error","a logic error","none of the above","a logic error","T7"));
+
+        set.add(new Questions("The 'less than or equal to' comparison operator in Java is __________","<","<=","=<","<<","<=","T8"));
+        set.add(new Questions("In Java, the word true is ________.","a Java keyword","a Boolean literal ","same as value 1","same as value 0","a Boolean literal","T8"));
+        set.add(new Questions("Suppose income is 4001, what is the output of the following code:\n" + "\n" + "if (income > 3000) {\n" + "  System.out.println(\"Income is greater than 3000\");\n" + "}\n" + "else if (income > 4000) {\n" + "  System.out.println(\"Income is greater than 4000\");\n","no output","Income is greater than 3000 ","Income is greater than 3000 followed by Income is greater than 4000","Income is greater than 4000","Income is greater than 3000 ","T8"));
+        set.add(new Questions("What is the output from System.out.println((int)Math.random() * 4)?","0","1","2","3","0","T8"));
+        set.add(new Questions("The __________ method immediately terminates the program.","System.terminate(0);","System.halt(0);","System.exit(0);","System.quit(0);","System.exit(0);","T8"));
+        set.add(new Questions("Suppose isPrime is a boolean variable, which of the following is the correct and best statement for testing if isPrime is true. ","if (isPrime = true) ","if (isPrime == true) ","if (isPrime)","if (!isPrime = false) ","if (isPrime)","T8"));
+        set.add(new Questions("Analyze the following program fragment:\n" + "\n" + "int x;\n" + "double d = 1.5;\n" + "\n" + "switch (d) {\n" + "  case 1.0: x = 1;\n" + "  case 1.5: x = 2;\n" + "  case 2.0: x = 3;\n" + "}\n","The program has a compile error because the required break statement is missing in the switch statement.","The program has a compile error because the required default case is missing in the switch statement.","The switch control variable cannot be double.","No errors.","The switch control variable cannot be double.","T8"));
+        set.add(new Questions("The following code displays ___________.\n" + "\n" + "double temperature = 50;\n" + "\n" + "if (temperature >= 100)\n" + "  System.out.println(\"too hot\");\n" + "else if (temperature <= 40)\n" + "  System.out.println(\"too cold\");\n" + "else\n" + "  System.out.println(\"just right\");\n","too hot","too cold",".just right","too hot too cold just right","just right","T8"));
+        set.add(new Questions("Which of the following is the correct expression that evaluates to true if the number x is between 1 and 100 or the number is negative? ","1 < x < 100 && x < 0","((x < 100) && (x > 1)) || (x < 0)","((x < 100) && (x > 1)) && (x < 0)","(1 > x >  100) || (x < 0)","((x < 100) && (x > 1)) || (x < 0)","T8"));
+        set.add(new Questions("Assume x = 4 and y = 5, Which of the following is true?","x < 5 && y < 5","x < 5 || y < 5","x > 5 && y > 5","x > 5 || y > 5","x < 5 || y < 5","T8"));
+
+        set.add(new Questions("How many times will the following code print \"Welcome to Java\"?\n" + "\n" + "int count = 0;\n" + "while (count < 10) {\n" + "  System.out.println(\"Welcome to Java\");\n" + "  count++;\n" + "}\n","8","9","10","11","10","T9"));
+        set.add(new Questions("What the output of the following code:\n" + "\n" + "for ( ; ; ) \n" + "  System.out.println(\"Welcome to Java\");\n","does not print anything.","prints out Welcome to Java one time.","prints out Welcome to Java two times.","prints out Welcome to Java forever.","prints out Welcome to Java forever.","T9"));
+        set.add(new Questions("Which of the loop statements always have their body executed at least once.","The while loop","The do-while loop","The for loop"," ","The do-while loop","T9"));
+        set.add(new Questions("Which of the following is the correct expression that evaluates to true if the number x is between 1 and 100 or the number is negative? ","1 < x < 100 && x < 0","((x < 100) && (x > 1)) || (x < 0)","((x < 100) && (x > 1)) && (x < 0)","(1 > x >  100) || (x < 0)","((x < 100) && (x > 1)) || (x < 0)","T9"));
+        set.add(new Questions("Assume x = 4 and y = 5, Which of the following is true?","x < 5 && y < 5","x < 5 || y < 5","x > 5 && y > 5","x > 5 || y > 5","x < 5 || y < 5","T9"));
+        set.add(new Questions("The expression 4 + 20 / (3 - 1) * 2 is evaluated to","4","20","24","9","24","T9"));
+        set.add(new Questions("Suppose x is 1. What is x after x += 2?","0","1","2","3","3","T9"));
+        set.add(new Questions("Java compiler translates Java source code into _________.","Java bytecode","machine code","assembly code","another high-level language code","Java bytecode","T9"));
+        set.add(new Questions("A block is enclosed inside __________.","parentheses","braces","brackets","quotes",".braces","T9"));
+        set.add(new Questions("Analyze the following statement:\n" + "\n" + "double sum = 0;\n" + "for (double d = 0; d < 10;) {\n" + "  d += 0.1;\n" + "  sum += sum + d;\n" + "}\n","The program has a compile error because the adjustment is missing in the for loop.","The program has a compile error because the control variable in the for loop cannot be of the double type.","The program runs in an infinite loop because d&lt;10 would always be true.","The program compiles and runs fine.","The program compiles and runs fine.","T9"));
+
+        set.add(new Questions("The extension name of a Java source code file is",".java",".obj",".class",".exe",".java","T10"));
+        set.add(new Questions("________  provides an integrated development environment (IDE) for rapidly developing Java programs. Editing, compiling, building, debugging, and online help are integrated in one graphical user interface. ","Java language specification","Java API","Java JDK",".exe","Java IDE","T10"));
+        set.add(new Questions("Every statement in Java ends with ________.","a semicolon (;)"," a comma (,)","a period (.)","an asterisk (*)","a semicolon (;)","T10"));
+        set.add(new Questions(" ________  is a technical definition of the language that includes the syntax and semantics of the Java programming language.","Java language specification","Java API","Java JDK","Java IDE","Java language specification","T10"));
+        set.add(new Questions("________ contains predefined classes and interfaces for developing Java programs."," Java language specification","Java API","Java JDK","Java IDE","Java API","T10"));
+        set.add(new Questions("Which of the following statements is correct?","Every line in a program must end with a semicolon.","Every statement in a program must end with a semicolon.","Every comment line must end with a semicolon.","Every method must end with a semicolon.","Every statement in a program must end with a semicolon.","T10"));
+        set.add(new Questions("Which JDK command is correct to run a Java application in ByteCode.class?","java ByteCode","java ByteCode.class","javac ByteCode.java","javac ByteCode","java ByteCode","T10"));
+        set.add(new Questions("Java compiler translates Java source code into _________.","Java bytecode","machine code","assembly code","another high-level language code","Java bytecode","T10"));
+        set.add(new Questions("A block is enclosed inside __________.","parentheses","braces","brackets","quotes",".braces","T10"));
+        set.add(new Questions("If a program compiles fine, but it produces incorrect result, then the program suffers  __________.","a compilation error","a runtime error","a logic error","none of the above","a logic error","T10"));
 
         return set;
     }

@@ -41,8 +41,20 @@ public class StartQuizActivity extends AppCompatActivity {
                     case "T5":
                         number = 40;
                         break;
-                    default:
+                    case "T6":
                         number = 50;
+                        break;
+                    case "T7":
+                        number = 60;
+                        break;
+                    case "T8":
+                        number = 70;
+                        break;
+                    case "T9":
+                        number = 80;
+                        break;
+                    default:
+                        number = 90;
                         break;
                 }
             }
