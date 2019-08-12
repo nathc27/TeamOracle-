@@ -13,12 +13,13 @@
             android:layout_width="match_parent"
             android:layout_height="350dp"
             android:orientation="vertical">
+
             <ImageView
-                android:layout_marginTop="45dp"
-                android:layout_gravity="center_horizontal"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:background="@drawable/icaccount"/>
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="45dp"
+                android:background="@drawable/jarvias" />
 
             <TextView
                 android:id="@+id/tv_username"
